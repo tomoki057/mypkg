@@ -2,19 +2,19 @@
 
 [![test](https://github.com/tomoki057/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/tomoki057/mypkg/actions/workflows/test.yml)
 
-* このリポジトリは2023年度ロボットシステム学の講義内で作成した`talker`と`listener`の2つのノードで基本的な通信を行うROS 2のパッケージをGitHubに公開したものです.
+* このリポジトリは2023年度ロボットシステム学の講義内で作成した talker と listener の2つのノードで基本的な通信を行うROS 2のパッケージをGitHubに公開したものです.
 
 ## トピック
-* `/countup`は16ビット符号付き整数のメッセージの型を持つデータが流れるものです.
+* /countup は16ビット符号付き整数のメッセージの型を持つデータが流れるものです.
 
-## talker
-* `talker`はパブリッシャを持つノードであり, 数字をカウントしてトピック`/countup`を通じてサブスクライバーを持つ`listener`に送信します.
+## talker.py
+* talker.pyはパブリッシャを持つノードであり, 数字をカウントしてトピック /countup を通じてサブスクライバーを持つノードのlistener.pyに送信します.
 
-## listener
-* `listener`はサブスクライバーを持つノードであり, トピックである`/countup`からメッセージを受け取り表示をします.
+## listener.py
+* listener.pyはサブスクライバーを持つノードであり, トピックである /countup からメッセージを受け取り表示をします.
 
-## launch
-* `launch`は`talker`と`listener`の2つのノードを一度に立ち上げるものです.
+## talk_listen.launch.py
+* talk_listen.launch.pyは talker,py と listener.py の2つのノードを一度に立ち上げるものです.
 
 ## 2つの端末で実行する場合
 
