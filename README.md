@@ -2,7 +2,7 @@
 
 [![test](https://github.com/tomoki057/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/tomoki057/mypkg/actions/workflows/test.yml)
 
-* このレポジトリは2023年度ロボットシステム学の講義内で作成した`talker`と`listener`の2つのノードで基本的な通信を行うROS 2プログラミングをGitHubに公開したものです.
+* このリポジトリは2023年度ロボットシステム学の講義内で作成した`talker`と`listener`の2つのノードで基本的な通信を行うROS 2のパッケージをGitHubに公開したものです.
 
 ## トピック
 * `/countup`は16ビット符号付き整数のメッセージの型を持つデータが流れるものである.
