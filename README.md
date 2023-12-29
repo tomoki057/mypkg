@@ -2,25 +2,47 @@
 
 [![test](https://github.com/tomoki057/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/tomoki057/mypkg/actions/workflows/test.yml)
 
-* このレポジトリは2023年度ロボットシステム学の講義内で作成したtalkerとlistenerの2つのノードで基本的な通信を行うROS 2プログラミングをGitHubに公開したものです。
+* このレポジトリは2023年度ロボットシステム学の講義内で作成したtalkerとlistenerの2つのノードで基本的な通信を行うROS 2プログラミングをGitHubに公開したものです.
 
-#### 2つの端末で実行する場合
+##実行結果
+
+### 2つの端末で実行する場合
 
 * 端末1
 ```
+###実行方法###
 $ ros2 run mypkg talker
+
+###実行結果###
 (なにも表示されない)
 ```
 * 端末2
 ```
+###実行方法###
 $ ros2 run mypkg listener
+
+###実行結果###
+[INFO] [1703827280.872042590] [listener]: Listen: 0
+[INFO] [1703827281.349368825] [listener]: Listen: 1
+[INFO] [1703827281.849390206] [listener]: Listen: 2
+[INFO] [1703827282.349319446] [listener]: Listen: 3
+[INFO] [1703827282.848882394] [listener]: Listen: 4
+[INFO] [1703827283.349066963] [listener]: Listen: 5
+[INFO] [1703827283.848843853] [listener]: Listen: 6
+[INFO] [1703827284.349116483] [listener]: Listen: 7
+[INFO] [1703827284.848926822] [listener]: Listen: 8
+[INFO] [1703827285.348062292] [listener]: Listen: 9
+[INFO] [1703827285.849149995] [listener]: Listen: 10
 
 ...
 ```
-#### 1つの端末で実行する場合
+### 1つの端末で実行する場合
 
 ```
+###実行方法###
 $ ros2 launch mypkg talk_listen.launch.py
+
+###実行結果###
 [INFO] [launch]: All log files can be found below /home/tomo0724/.ros/log/2023-12-29-00-23-03-844941-satomo724pc-680
 [INFO] [launch]: Default logging verbosity is set to INFO
 [INFO] [talker-1]: process started with pid [682]
@@ -36,6 +58,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 [listener-2] [INFO] [1703776988.797022717] [listener]: Listen: 8
 [listener-2] [INFO] [1703776989.297141960] [listener]: Listen: 9
 [listener-2] [INFO] [1703776989.796799824] [listener]: Listen: 10
+
 ...
 ```
 
