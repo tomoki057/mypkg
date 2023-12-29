@@ -1,73 +1,47 @@
 # mypkg
-こちらは千葉工業大学未来ロボティクス学科のロボットシステム学２０２３の授業で製作したものです
 
-* ROS2のインストールがまだの方は先にインストールをお願いします
-* ROS2のインストールがお済の方は以下のコードでクローンを行ってください
-```
-$ git clone https://github.com/515629/mypkg.git
-```
+[![test](https://github.com/tomoki057/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/tomoki057/mypkg/actions/workflows/test.yml)
 
-## talker.py
-* 数字をカウントして、トピック/countupを通じてメッセージを送信するパブリッシャを持つノードです
-    * メッセージの型は16ビット符号つき整数です
+* このレポジトリは2023年度ロボットシステム学の講義内で作成したtalkerとlistenerの2つのノードで基本的な通信を行うROS 2プログラミングをGitHubに公開したものです。
 
-## listener.py
-* /countupからメッセージをもらって表示するサブスクライバを持つノードです
-
-## talk_listen.launch.py
-* talker.pyとlistener.pyを一度に立ち上げることができます
-
-## 使用方法と結果
-
-#### 端末を2つ使って実行する
+#### 2つの端末で実行する場合
 
 * 端末1
 ```
 $ ros2 run mypkg talker
-(なにも表示されないです)
+(なにも表示されない)
 ```
 * 端末2
 ```
 $ ros2 run mypkg listener
-[INFO] [1703247924.927275467] [listener]: Listen: 26
-[INFO] [1703247925.405913627] [listener]: Listen: 27
-[INFO] [1703247925.905327838] [listener]: Listen: 28
-[INFO] [1703247926.406000302] [listener]: Listen: 29
-[INFO] [1703247926.905997234] [listener]: Listen: 30
-[INFO] [1703247927.405712175] [listener]: Listen: 31
-[INFO] [1703247927.905686033] [listener]: Listen: 32
-[INFO] [1703247928.405870943] [listener]: Listen: 33
-[INFO] [1703247928.906206418] [listener]: Listen: 34
-[INFO] [1703247929.405930550] [listener]: Listen: 35
-[INFO] [1703247929.905829181] [listener]: Listen: 36
-[INFO] [1703247930.405274588] [listener]: Listen: 37
-[INFO] [1703247930.906189735] [listener]: Listen: 38
-(Ctrl+Cを行うまで出力し続けます)
+
+...
 ```
-#### 端末を1つ使って実行する
+#### 1つの端末で実行する場合
 
 ```
 $ ros2 launch mypkg talk_listen.launch.py
-[INFO] [launch]: All log files can be found below /home/tokojun/.ros/log/2023-12-22-21-36-45-552193-jusomaru-527
+[INFO] [launch]: All log files can be found below /home/tomo0724/.ros/log/2023-12-29-00-23-03-844941-satomo724pc-680
 [INFO] [launch]: Default logging verbosity is set to INFO
-[INFO] [talker-1]: process started with pid [528]
-[INFO] [listener-2]: process started with pid [530]
-[listener-2] [INFO] [1703248606.297414304] [listener]: Listen: 0
-[listener-2] [INFO] [1703248606.786162760] [listener]: Listen: 1
-[listener-2] [INFO] [1703248607.285348985] [listener]: Listen: 2
-[listener-2] [INFO] [1703248607.785775273] [listener]: Listen: 3
-[listener-2] [INFO] [1703248608.286045472] [listener]: Listen: 4
-[listener-2] [INFO] [1703248608.784793378] [listener]: Listen: 5
-[listener-2] [INFO] [1703248609.285026779] [listener]: Listen: 6
-[listener-2] [INFO] [1703248609.785483579] [listener]: Listen: 7
-[listener-2] [INFO] [1703248610.286174203] [listener]: Listen: 8
-[listener-2] [INFO] [1703248610.785933533] [listener]: Listen: 9
-[listener-2] [INFO] [1703248611.285891717] [listener]: Listen: 10
-(Ctrl+Cを行うまで出力し続けます)
+[INFO] [talker-1]: process started with pid [682]
+[INFO] [listener-2]: process started with pid [684]
+[listener-2] [INFO] [1703776984.866624614] [listener]: Listen: 0
+[listener-2] [INFO] [1703776985.296741953] [listener]: Listen: 1
+[listener-2] [INFO] [1703776985.796990743] [listener]: Listen: 2
+[listener-2] [INFO] [1703776986.296633211] [listener]: Listen: 3
+[listener-2] [INFO] [1703776986.796945494] [listener]: Listen: 4
+[listener-2] [INFO] [1703776987.297226133] [listener]: Listen: 5
+[listener-2] [INFO] [1703776987.796805299] [listener]: Listen: 6
+[listener-2] [INFO] [1703776988.297048392] [listener]: Listen: 7
+[listener-2] [INFO] [1703776988.797022717] [listener]: Listen: 8
+[listener-2] [INFO] [1703776989.297141960] [listener]: Listen: 9
+[listener-2] [INFO] [1703776989.796799824] [listener]: Listen: 10
+...
 ```
 
 ## 必要なソフトウェア
 * ROS2 foxy
+* Python
 
 ## テスト環境
 * Ubuntu 20.04.6 LTS
