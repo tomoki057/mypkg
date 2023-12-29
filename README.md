@@ -2,11 +2,21 @@
 
 [![test](https://github.com/tomoki057/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/tomoki057/mypkg/actions/workflows/test.yml)
 
-* このレポジトリは2023年度ロボットシステム学の講義内で作成したtalkerとlistenerの2つのノードで基本的な通信を行うROS 2プログラミングをGitHubに公開したものです.
+* このレポジトリは2023年度ロボットシステム学の講義内で作成した`talker`と`listener`の2つのノードで基本的な通信を行うROS 2プログラミングをGitHubに公開したものです.
 
-##実行結果
+## トピック
+* `/countup`は16ビット符号付き整数のメッセージの型を持つデータが流れるトピックである.
 
-### 2つの端末で実行する場合
+## talker
+* `talker`はパブリッシャを持つノードであり, 数字をカウントしてトピック`/countup`を通じてサブスクライバーを持つ`listener`に送信する.
+
+## listener
+* `listener`はサブスクライバーを持つノードであり, トピックである`/countup`からメッセージを受け取り表示をする.
+
+## launch
+* `talker`と`listener`の2つのノードを一度に立ち上げるものである.
+
+## 2つの端末で実行する場合
 
 * 端末1
 ```
@@ -36,7 +46,7 @@ $ ros2 run mypkg listener
 
 ...
 ```
-### 1つの端末で実行する場合
+## 1つの端末で実行する場合
 
 ```
 ###実行方法###
@@ -63,7 +73,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 ```
 
 ## 必要なソフトウェア
-* ROS2 foxy
+* ROS2
 * Python
 
 ## テスト環境
