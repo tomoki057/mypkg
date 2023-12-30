@@ -2,10 +2,10 @@
 
 [![test](https://github.com/tomoki057/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/tomoki057/mypkg/actions/workflows/test.yml)
 
-* このリポジトリは, 2023年度ロボットシステム学の講義内で作成した, "talker" と "listener" の2つのノード間で基本的な通信を行うROS 2のパッケージを, GitHubに公開したものです.
+* このリポジトリは, 2023年度ロボットシステム学の講義内で作成した, talkerとlistenerを用いて基本的な通信を行うROS 2のパッケージを, GitHubに公開したものです.
 
 ## トピック
-* トピックは "/countup" であり, 16ビット符号付き整数のメッセージの型を持つデータが流れるものです.
+* トピックは ``/countup`` であり, 16ビット符号付き整数のメッセージの型を持つデータが流れるものです.
 
 ## talker.py
 * talker.pyはパブリッシャを持つノードであり, 数字をカウントしてトピック(/countup)を通じてサブスクライバーを持つノードのlistener.pyに送信します.
