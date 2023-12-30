@@ -2,23 +2,19 @@
 
 [![test](https://github.com/tomoki057/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/tomoki057/mypkg/actions/workflows/test.yml)
 
-* このリポジトリは2023年度ロボットシステム学の講義内で作成した talker と listener の2つのノードで基本的な通信を行うROS 2のパッケージをGitHubに公開したものです.
+* このリポジトリは, 2023年度ロボットシステム学の講義内で作成した, "talker" と "listener" の2つのノード間で基本的な通信を行うROS 2のパッケージを, GitHubに公開したものです.
 
-## インストール方法
-```
-git clone https://github.com/tomoki057/mypkg.git
-```
 ## トピック
-* 今回使用されているトピックは "/countup" であり, 16ビット符号付き整数のメッセージの型を持つデータが流れるものです.
+* トピックは "/countup" であり, 16ビット符号付き整数のメッセージの型を持つデータが流れるものです.
 
 ## talker.py
-* talker.pyはパブリッシャを持つノードであり, 数字をカウントしてトピック /countup を通じてサブスクライバーを持つノードのlistener.pyに送信します.
+* talker.pyはパブリッシャを持つノードであり, 数字をカウントしてトピック(/countup)を通じてサブスクライバーを持つノードのlistener.pyに送信します.
 
 ## listener.py
-* listener.pyはサブスクライバーを持つノードであり, トピックである /countup からメッセージを受け取り表示をします.
+* listener.pyはサブスクライバーを持つノードであり, トピック(/countup)からメッセージを受け取り表示をします.
 
 ## talk_listen.launch.py
-* talk_listen.launch.pyは talker,py と listener.py の2つのノードを一度に立ち上げるものです.
+* talk_listen.launch.pyは, talker,py と listener.py の2つのノードを一度に立ち上げるものです.
 
 ## 2つの端末で実行する場合
 
@@ -75,13 +71,14 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ...
 ```
-
 ## 必要なソフトウェア
-* ROS 2
+* ROS 2 foxy
 * Python3
 
 ## テスト環境
 * Ubuntu 20.04.6 LTS
+* ROS 2 foxy
+* Python3
 
 ## 著作権・ライセンス 
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
