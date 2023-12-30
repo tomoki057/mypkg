@@ -14,7 +14,7 @@
 * listener.pyはサブスクライバーを持つノードであり, トピック(/countup)からメッセージを受け取り表示をします.
 
 ## talk_listen.launch.py
-* talk_listen.launch.pyは, talker,py と listener.py の2つのノードを一度に立ち上げるものです.
+* talk_listen.launch.pyは, talker.py と listener.py の2つのノードを一度に立ち上げるものです.
 
 ## 2つの端末で実行する場合
 
@@ -44,7 +44,7 @@ $ ros2 run mypkg listener
 [INFO] [1703827285.348062292] [listener]: Listen: 9
 [INFO] [1703827285.849149995] [listener]: Listen: 10
 
-...
+. . .
 ```
 ## 1つの端末で実行する場合
 
@@ -69,16 +69,15 @@ $ ros2 launch mypkg talk_listen.launch.py
 [listener-2] [INFO] [1703776989.297141960] [listener]: Listen: 9
 [listener-2] [INFO] [1703776989.796799824] [listener]: Listen: 10
 
-...
+. . .
 ```
+
 ## 必要なソフトウェア
-* ROS 2 foxy
 * Python3
 
 ## テスト環境
 * Ubuntu 20.04.6 LTS
 * ROS 2 foxy
-* Python3
 
 ## 著作権・ライセンス 
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
