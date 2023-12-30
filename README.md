@@ -4,8 +4,12 @@
 
 * このリポジトリは2023年度ロボットシステム学の講義内で作成した talker と listener の2つのノードで基本的な通信を行うROS 2のパッケージをGitHubに公開したものです.
 
+## インストール方法
+```
+git clone https://github.com/tomoki057/mypkg.git
+```
 ## トピック
-* /countup は16ビット符号付き整数のメッセージの型を持つデータが流れるものです.
+* 今回使用されているトピックは "/countup" であり, 16ビット符号付き整数のメッセージの型を持つデータが流れるものです.
 
 ## talker.py
 * talker.pyはパブリッシャを持つノードであり, 数字をカウントしてトピック /countup を通じてサブスクライバーを持つノードのlistener.pyに送信します.
@@ -77,7 +81,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 * Python
 
 ## テスト環境
-* Ubuntu 20.04.6 LTS
+* Ubuntu 20.04.6 LTShttps://hub.docker.com/layers/ryuichiueda/ubuntu22.04-ros2/latest/images/sha256-0e1773bc6f12b57172c8818aac36aeb97ca13269028028d49ad5f6f8cc0d6204?context=explore
 
 ## 著作権・ライセンス 
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
