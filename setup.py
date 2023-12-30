@@ -1,6 +1,5 @@
 # SPDX-FileCopyrightText: 2023 Tomoki sato
 # SPDX-License-Identifier: BSD-3-Clause
-
 from setuptools import find_packages, setup
 import os
 from glob import glob
